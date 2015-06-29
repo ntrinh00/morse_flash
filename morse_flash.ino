@@ -3,6 +3,9 @@
 int pin = 13;
 int pin1 = 12;
 
+int dash_duration = 500;
+int dot_duration = 250;
+
 // Message to be flashed, must be typed in caps
 char message[] = "GOOD IN CODING BUILD A MORSE FLASHER";
 
@@ -59,7 +62,7 @@ myTable[35].text = '9';  myTable[35].morse = String("----.");
 void dot()
 {
   digitalWrite(pin, HIGH);
-  delay(250);
+  delay(dot_duration);
   digitalWrite(pin, LOW);
   delay(250);
 }
@@ -68,7 +71,7 @@ void dash()
 {
   //digitalWrite(pin, HIGH);
   digitalWrite(pin1, HIGH);
-  delay(500);
+  delay(dash_duration);
   //digitalWrite(pin, LOW);
   digitalWrite(pin1,LOW);
   delay(250);
